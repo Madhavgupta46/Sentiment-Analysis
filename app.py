@@ -1,6 +1,5 @@
 import streamlit as st
 import joblib
-import sklearn  # IMPORTANT: use preinstalled sklearn
 
 model = joblib.load("model.joblib")
 vectorizer = joblib.load("vectorizer.joblib")
