@@ -17,7 +17,7 @@ st.markdown("""
 /* App background */
 .main {
     background-color: #F8FAFC;
-    color: #1F2937;
+    color: #F8FAFC;
 }
 
 /* Title */
