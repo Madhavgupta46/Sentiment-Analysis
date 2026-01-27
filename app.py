@@ -80,10 +80,22 @@ textarea {
 }
 
 .neutral {
-    background: linear-gradient(135deg, #FEF3C7);
+    background: linear-gradient(135deg, #FEF3C7, #FDE68A);
+}
 
+.negative {
+    background: linear-gradient(135deg, #FECACA, #FCA5A5);
+}
 
-
+/* Footer */
+.footer {
+    text-align: center;
+    color: #64748B;
+    font-size: 13px;
+    margin-top: 50px;
+}
+</style>
+""", unsafe_allow_html=True)
 
 # ---------------- HEADER ----------------
 st.markdown('<div class="title">💬 Sentiment Analyzer</div>', unsafe_allow_html=True)
