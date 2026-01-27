@@ -1,20 +1,11 @@
 import streamlit as st
-import joblib
 
-model = joblib.load("model.joblib")
-vectorizer = joblib.load("vectorizer.joblib")
+st.set_page_config(page_title="Test App", layout="centered")
 
-st.title("🧠 Sentiment Analysis App")
+st.title("🚀 Streamlit is working!")
+st.write("If you can see this, deployment is successful.")
 
-text = st.text_area("Enter text")
+name = st.text_input("Your name")
 
-if st.button("Predict"):
-    vec = vectorizer.transform([text])
-    pred = model.predict(vec)[0]
-
-    if pred == 0:
-        st.error("🔴 Negative")
-    elif pred == 1:
-        st.info("🟡 Neutral")
-    else:
-        st.success("🟢 Positive")
+if st.button("Say hi"):
+    st.success(f"Hello {name}! 🎉")
