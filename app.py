@@ -14,51 +14,91 @@ model = joblib.load("model.joblib")
 # ---------------- CUSTOM CSS ----------------
 st.markdown("""
 <style>
+/* Main background */
 .main {
-    background-color: #0f172a;
-    color: white;
+    background-color: #020617;
+    color: #E5E7EB;
 }
+
+/* Title */
 .title {
     text-align: center;
     font-size: 42px;
     font-weight: 800;
-    margin-bottom: 5px;
+    color: #38BDF8;
+    margin-bottom: 6px;
 }
+
+/* Subtitle */
 .subtitle {
     text-align: center;
     font-size: 16px;
-    color: #cbd5f5;
+    color: #E5E7EB;
+    opacity: 0.85;
     margin-bottom: 30px;
 }
+
+/* Text area */
 textarea {
-    border-radius: 12px !important;
+    background-color: #020617 !important;
+    color: #E5E7EB !important;
+    border: 1px solid #38BDF8 !important;
+    border-radius: 14px !important;
 }
-.sentiment-box {
-    padding: 25px;
-    border-radius: 16px;
-    text-align: center;
-    font-size: 24px;
+
+/* Button */
+.stButton > button {
+    background: linear-gradient(135deg, #38BDF8, #0EA5E9);
+    color: #020617;
+    border: none;
+    border-radius: 14px;
+    padding: 0.6em 1.2em;
+    font-size: 16px;
     font-weight: 700;
-    margin-top: 20px;
+    transition: 0.3s ease;
 }
+
+.stButton > button:hover {
+    transform: scale(1.03);
+    background: linear-gradient(135deg, #0EA5E9, #38BDF8);
+}
+
+/* Sentiment result box */
+.sentiment-box {
+    padding: 24px;
+    border-radius: 18px;
+    text-align: center;
+    font-size: 26px;
+    font-weight: 800;
+    margin-top: 22px;
+    color: #E5E7EB;
+}
+
+/* Sentiment colors */
 .positive {
-    background: linear-gradient(135deg, #16a34a, #22c55e);
+    background: linear-gradient(135deg, #16A34A, #22C55E);
 }
+
 .neutral {
-    background: linear-gradient(135deg, #f59e0b, #facc15);
-    color: black;
+    background: linear-gradient(135deg, #FB923C, #FDBA74);
+    color: #020617;
 }
+
 .negative {
-    background: linear-gradient(135deg, #dc2626, #ef4444);
+    background: linear-gradient(135deg, #DC2626, #EF4444);
 }
+
+/* Footer */
 .footer {
     text-align: center;
-    color: #94a3b8;
+    color: #E5E7EB;
+    opacity: 0.7;
     font-size: 13px;
     margin-top: 50px;
 }
 </style>
 """, unsafe_allow_html=True)
+
 
 # ---------------- HEADER ----------------
 st.markdown('<div class="title">💬 Sentiment Analyzer</div>', unsafe_allow_html=True)
