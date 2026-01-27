@@ -14,10 +14,10 @@ model = joblib.load("model.joblib")
 # ---------------- CUSTOM CSS ----------------
 st.markdown("""
 <style>
-/* Main background */
+/* App background */
 .main {
     background-color: #F8FAFC;
-    color:#F8FAFC;
+    color: #1F2937;
 }
 
 /* Title */
@@ -33,11 +33,11 @@ st.markdown("""
 .subtitle {
     text-align: center;
     font-size: 16px;
-    color: #374151;
+    color: #475569;
     margin-bottom: 30px;
 }
 
-/* Text area */
+/* Text input */
 textarea {
     background-color: #FFFFFF !important;
     color: #1F2937 !important;
@@ -47,8 +47,8 @@ textarea {
 
 /* Button */
 .stButton > button {
-    background-color: #1F2937;
-    color: #F8FAFC;
+    background-color: #CBD5E1;
+    color: #1F2937;
     border: none;
     border-radius: 14px;
     padding: 0.6em 1.2em;
@@ -58,11 +58,11 @@ textarea {
 }
 
 .stButton > button:hover {
-    background-color: #111827;
+    background-color: #94A3B8;
     transform: scale(1.03);
 }
 
-/* Sentiment result box */
+/* Sentiment card */
 .sentiment-box {
     padding: 24px;
     border-radius: 18px;
@@ -74,28 +74,14 @@ textarea {
     color: #1F2937;
 }
 
-/* Sentiment colors */
+/* Sentiment colors (soft & light) */
 .positive {
-    background: linear-gradient(135deg, #4ADE80, #86EFAC);
+    background: linear-gradient(135deg, #BBF7D0, #86EFAC);
 }
 
 .neutral {
-    background: linear-gradient(135deg, #FBBF24, #FDE68A);
-}
+    background: linear-gradient(135deg, #FEF3C7, #
 
-.negative {
-    background: linear-gradient(135deg, #F87171, #FCA5A5);
-}
-
-/* Footer */
-.footer {
-    text-align: center;
-    color: #6B7280;
-    font-size: 13px;
-    margin-top: 50px;
-}
-</style>
-""", unsafe_allow_html=True)
 
 
 
