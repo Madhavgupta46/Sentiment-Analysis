@@ -80,7 +80,7 @@ textarea {
 }
 
 .neutral {
-    background: linear-gradient(135deg, #FEF3C7, #
+    background: linear-gradient(135deg, #FEF3C7);
 
 
 
