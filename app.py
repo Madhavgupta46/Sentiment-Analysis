@@ -16,16 +16,16 @@ st.markdown("""
 <style>
 /* Main background */
 .main {
-    background-color: #020617;
-    color: #E5E7EB;
+    background-color: #F8FAFC;
+    color: #1F2937;
 }
 
 /* Title */
 .title {
     text-align: center;
-    font-size: 42px;
+    font-size: 40px;
     font-weight: 800;
-    color: #38BDF8;
+    color: #1F2937;
     margin-bottom: 6px;
 }
 
@@ -33,23 +33,22 @@ st.markdown("""
 .subtitle {
     text-align: center;
     font-size: 16px;
-    color: #E5E7EB;
-    opacity: 0.85;
+    color: #374151;
     margin-bottom: 30px;
 }
 
 /* Text area */
 textarea {
-    background-color: #020617 !important;
-    color: #E5E7EB !important;
-    border: 1px solid #38BDF8 !important;
+    background-color: #FFFFFF !important;
+    color: #1F2937 !important;
+    border: 1px solid #CBD5E1 !important;
     border-radius: 14px !important;
 }
 
 /* Button */
 .stButton > button {
-    background: linear-gradient(135deg, #38BDF8, #0EA5E9);
-    color: #020617;
+    background-color: #1F2937;
+    color: #F8FAFC;
     border: none;
     border-radius: 14px;
     padding: 0.6em 1.2em;
@@ -59,8 +58,8 @@ textarea {
 }
 
 .stButton > button:hover {
+    background-color: #111827;
     transform: scale(1.03);
-    background: linear-gradient(135deg, #0EA5E9, #38BDF8);
 }
 
 /* Sentiment result box */
@@ -71,33 +70,33 @@ textarea {
     font-size: 26px;
     font-weight: 800;
     margin-top: 22px;
-    color: #E5E7EB;
+    background-color: #E5E7EB;
+    color: #1F2937;
 }
 
 /* Sentiment colors */
 .positive {
-    background: linear-gradient(135deg, #16A34A, #22C55E);
+    background: linear-gradient(135deg, #4ADE80, #86EFAC);
 }
 
 .neutral {
-    background: linear-gradient(135deg, #FB923C, #FDBA74);
-    color: #020617;
+    background: linear-gradient(135deg, #FBBF24, #FDE68A);
 }
 
 .negative {
-    background: linear-gradient(135deg, #DC2626, #EF4444);
+    background: linear-gradient(135deg, #F87171, #FCA5A5);
 }
 
 /* Footer */
 .footer {
     text-align: center;
-    color: #E5E7EB;
-    opacity: 0.7;
+    color: #6B7280;
     font-size: 13px;
     margin-top: 50px;
 }
 </style>
 """, unsafe_allow_html=True)
+
 
 
 # ---------------- HEADER ----------------
