@@ -17,7 +17,7 @@ st.markdown("""
 /* Main background */
 .main {
     background-color: #F8FAFC;
-    color:F8FAFC;
+    color:#F8FAFC;
 }
 
 /* Title */
