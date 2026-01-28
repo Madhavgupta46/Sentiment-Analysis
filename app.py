@@ -14,86 +14,112 @@ model = joblib.load("model.joblib")
 # ---------------- CUSTOM CSS ----------------
 st.markdown("""
 <style>
-/* App background */
-.main {
+
+/* ================= GLOBAL ================= */
+.stApp {
     background-color: #F8FAFC;
-    color: #F8FAFC;
+    font-family: "Inter", sans-serif;
 }
 
-/* Title */
-.title {
-    text-align: center;
-    font-size: 40px;
-    font-weight: 800;
-    color: #1F2937;
-    margin-bottom: 6px;
+.block-container {
+    padding-top: 2rem;
+    max-width: 1100px;
 }
 
-/* Subtitle */
-.subtitle {
-    text-align: center;
-    font-size: 16px;
-    color: #475569;
-    margin-bottom: 30px;
-}
-
-/* Text input */
-textarea {
-    background-color: #FFFFFF !important;
-    color: #1F2937 !important;
-    border: 1px solid #CBD5E1 !important;
-    border-radius: 14px !important;
-}
-
-/* Button */
-.stButton > button {
-    background-color: #CBD5E1;
-    color: #1F2937;
-    border: none;
-    border-radius: 14px;
-    padding: 0.6em 1.2em;
-    font-size: 16px;
+/* ================= HEADINGS ================= */
+h1 {
+    color: #0F172A;
     font-weight: 700;
-    transition: 0.3s ease;
+}
+
+h2, h3 {
+    color: #1E293B;
+    font-weight: 600;
+}
+
+/* ================= CARDS ================= */
+.card {
+    background: #FFFFFF;
+    border-radius: 14px;
+    padding: 20px;
+    margin: 10px 0;
+    box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
+    transition: transform 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+}
+
+/* ================= METRIC CARDS ================= */
+[data-testid="metric-container"] {
+    background-color: #FFFFFF;
+    border-radius: 14px;
+    padding: 15px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+/* ================= SENTIMENT BADGES ================= */
+.sentiment-positive {
+    background: #DCFCE7;
+    color: #166534;
+    padding: 10px 16px;
+    border-radius: 20px;
+    font-weight: 600;
+    display: inline-block;
+}
+
+.sentiment-neutral {
+    background: #FEF9C3;
+    color: #854D0E;
+    padding: 10px 16px;
+    border-radius: 20px;
+    font-weight: 600;
+    display: inline-block;
+}
+
+.sentiment-negative {
+    background: #FEE2E2;
+    color: #991B1B;
+    padding: 10px 16px;
+    border-radius: 20px;
+    font-weight: 600;
+    display: inline-block;
+}
+
+/* ================= INPUT ================= */
+textarea {
+    border-radius: 12px !important;
+    border: 1px solid #CBD5E1 !important;
+}
+
+/* ================= BUTTON ================= */
+.stButton > button {
+    background: linear-gradient(135deg, #3B82F6, #2563EB);
+    color: white;
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-weight: 600;
+    border: none;
 }
 
 .stButton > button:hover {
-    background-color: #94A3B8;
-    transform: scale(1.03);
+    background: linear-gradient(135deg, #2563EB, #1D4ED8);
 }
 
-/* Sentiment card */
-.sentiment-box {
-    padding: 24px;
-    border-radius: 18px;
-    text-align: center;
-    font-size: 26px;
-    font-weight: 800;
-    margin-top: 22px;
-    background-color: #E5E7EB;
-    color: #1F2937;
+/* ================= INFO / SUCCESS ================= */
+.stAlert {
+    border-radius: 12px;
 }
 
-/* Sentiment colors (soft & light) */
-.positive {
-    background: linear-gradient(135deg, #BBF7D0, #86EFAC);
-}
-
-.neutral {
-    background: linear-gradient(135deg, #FEF3C7, #FDE68A);
-}
-
-.negative {
-    background: linear-gradient(135deg, #FECACA, #FCA5A5);
-}
-
-/* Footer */
+/* ================= FOOTER ================= */
 .footer {
     text-align: center;
     color: #64748B;
-    font-size: 13px;
-    margin-top: 50px;
+    margin-top: 40px;
+    font-size: 14px;
 }
+
 </style>
 """, unsafe_allow_html=True)
 
