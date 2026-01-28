@@ -26,15 +26,23 @@ st.markdown("""
     max-width: 1100px;
 }
 
-/* ================= HEADINGS ================= */
-h1 {
-    color: #0F172A;
-    font-weight: 700;
+/* FORCE HEADINGS VISIBILITY */
+h1, h2, h3, h4 {
+    color: #0F172A !important;
+    font-weight: 700 !important;
+    opacity: 1 !important;
+    visibility: visible !important;
 }
 
-h2, h3 {
-    color: #1E293B;
-    font-weight: 600;
+/* STREAMLIT TITLE FIX */
+[data-testid="stMarkdownContainer"] h1 {
+    color: #0F172A !important;
+    font-size: 2.2rem !important;
+}
+
+/* REMOVE INVISIBLE HEADER BUG */
+header {
+    background: transparent !important;
 }
 
 /* ================= CARDS ================= */
